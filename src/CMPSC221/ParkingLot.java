@@ -32,8 +32,8 @@ public class ParkingLot {
             isParked = true;
             vehicles.add(vehicle);
             System.out.println("Parked " + vehicle);
-        }
-        else {
+
+        } else {
             System.out.println("Lot Full");
         }
         return isParked;
@@ -42,7 +42,7 @@ public class ParkingLot {
 
     public static void main(String[] args) {
         //Create the Parking Lot
-        ParkingLot pl = new ParkingLot(100,1);
+        ParkingLot pl = new ParkingLot(100, 1);
         //Create the Light Poles
         LocalDateTime ldtStart = LocalDateTime.now();
         LocalDateTime ldtEnd = ldtStart.plusHours(6);
@@ -57,7 +57,7 @@ public class ParkingLot {
         System.out.println("Number of Available spots: " + pl.availableSpots());
 
         //Fill the lot
-        while (pl.availableSpots()>0) {
+        while (pl.availableSpots() > 0) {
             pl.parkAVehicle(new Truck(Color.black, "Ford", "F150 XL", 4, 6.5, "4WD", 7000));
         }
         //Lot should be full
